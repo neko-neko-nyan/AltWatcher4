@@ -11,8 +11,6 @@
   },
   {
     "name": "Sibnet",
-    "description": "Sibnet",
-    "forRx": false,
     "forNotRx": true,
     "url": "video.sibnet.ru/search.php?panel=open&sortby=0&duration=0&inname=1&text=",
     "search": "name",
@@ -21,8 +19,6 @@
   },
   {
     "name": "Myvi",
-    "description": "Myvi",
-    "forRx": false,
     "forNotRx": true,
     "url": "www.myvi.tv/search/video?q=",
     "search": "name",
@@ -31,8 +27,6 @@
   },
   {
     "name": "YouTube",
-    "description": "YouTube",
-    "forRx": false,
     "forNotRx": true,
     "url": "www.youtube.com/results?search_query=",
     "search": "name",
@@ -43,7 +37,6 @@
     "name": "PornHub",
     "description": "100% Вариант",
     "forRx": true,
-    "forNotRx": false,
     "url": "pornhub.com/video/search?search=",
     "search": "name",
     "addEpisode": true,
@@ -53,7 +46,6 @@
     "name": "xVideos",
     "description": "Для VPNщиков",
     "forRx": true,
-    "forNotRx": false,
     "url": "www.xvideos.com/?k=",
     "search": "name",
     "addEpisode": true,
@@ -61,57 +53,44 @@
   },
   {
     "name": "Anime 365",
-    "description": "Anime 365",
-    "forRx": false,
     "forNotRx": true,
     "url": "smotret-anime.ru/catalog/search?q=",
     "search": "link"
   },
   {
     "name": "Hentai 365",
-    "description": "Hentai 365",
     "forRx": true,
-    "forNotRx": false,
     "url": "hentai365.ru/catalog/search?q=",
     "search": "link"
   },
   {
     "name": "SR",
     "description": "SovetRomantica",
-    "forRx": false,
     "forNotRx": true,
     "url": "sovetromantica.com/anime?query=",
     "search": "name"
   },
   {
     "name": "Rutracker",
-    "description": "Rutracker",
-    "forRx": false,
     "forNotRx": true,
     "url": "rutracker.org/forum/tracker.php?nm=",
     "search": "name"
   },
   {
     "name": "HentaiHaven",
-    "description": "VK",
+    "description": "HH",
     "forRx": true,
-    "forNotRx": false,
     "url": "hentaihaven.org/search/",
     "search": "name"
   },
   {
     "name": "Desu.me",
-    "description": "Desu.me",
-    "forRx": false,
     "forNotRx": true,
     "url": "desu.me/search/search?keywords=",
-    "search": "name",
-    "//TODO": "Search in anime, not in forum"
+    "search": "name"
   },
   {
     "name": "YouAnime",
-    "description": "YouAnime",
-    "forRx": false,
     "forNotRx": true,
     "url": "you-anime.ru/search?keyword=",
     "search": "name"
@@ -119,7 +98,6 @@
   {
     "name": "Yummy",
     "description": "YummyAnime",
-    "forRx": false,
     "forNotRx": true,
     "url": "yummyanime.club/search?word=",
     "search": "name"
@@ -127,104 +105,78 @@
   
   {
     "name": "HentaiChan",
-    "description": "HentaiChan",
     "forRx": true,
-    "forNotRx": false,
     "url": "henchan.me",
     "search": "dle"
   },
   {
     "name": "AnimeSpirit",
-    "description": "animespirit",
-    "forRx": false,
     "forNotRx": true,
     "url": "animespirit.ru",
     "search": "dle"
   },
   {
     "name": "AniDUB",
-    "description": "AniDUB",
-    "forRx": false,
     "forNotRx": true,
     "url": "online.anidub.com",
     "search": "dle"
   },
   {
     "name": "AniPlay",
-    "description": "AniPlay",
-    "forRx": false,
     "forNotRx": true,
     "url": "aniplay.tv",
     "search": "dle"
   },
   {
     "name": "AnimeBest",
-    "description": "AnimeBest",
-    "forRx": false,
     "forNotRx": true,
     "url": "animebest.org",
     "search": "dle"
   },
   {
     "name": "AniTokio",
-    "description": "AniTokio",
-    "forRx": false,
     "forNotRx": true,
     "url": "anitokyo.tv",
     "search": "dle"
   },
   {
     "name": "Yandere",
-    "description": "Yandere",
-    "forRx": false,
     "forNotRx": true,
     "url": "yandere.top",
     "search": "dle"
   },
   {
     "name": "AnimeDub",
-    "description": "AnimeDub",
-    "forRx": false,
     "forNotRx": true,
     "url": "animedub.ru",
     "search": "dle"
   },
   {
     "name": "AniMaunt",
-    "description": "AniMaunt",
-    "forRx": false,
     "forNotRx": true,
     "url": "animaunt.tv",
     "search": "dle"
   },
   {
     "name": "RisensTeam",
-    "description": "RisensTeam",
-    "forRx": false,
     "forNotRx": true,
     "url": "risens.team",
     "search": "dle"
   },
   {
     "name": "AniStar",
-    "description": "AniStar",
-    "forRx": false,
     "forNotRx": true,
     "url": "anistar.org",
     "search": "dle"
   },
   {
     "name": "AnimeLend",
-    "description": "AnimeLend",
-    "forRx": false,
     "forNotRx": true,
     "url": "animelend.info",
     "search": "dle"
   },
   {
     "name": "AnimeVost",
-    "description": "AnimeVost",
-    "forRx": false,
     "forNotRx": true,
     "url": "animerost.org",
     "search": "dle"
