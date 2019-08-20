@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.0.0
+// @version      4.0.1
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       NekoNekoNyan
 // @match        http://shikimori.one/*
 // @match        https://shikimori.one/*
 // @match        http://shikimori.org/*
 // @match        https://shikimori.org/*
+// @updateURL    https://github.com/Pasha13666/AltWatcher4/raw/master/watchonlinemenu.user.js
+// @homepageURL  https://github.com/Pasha13666/AltWatcher4
 // @run-at       document-body
 // @license      MIT
 // @grant        GM_addStyle
@@ -215,11 +217,13 @@
         .then(function(services){
             GM_log("Starting...");
             let start = function(){
-                if (document.body.classList.contains("p-animes")) {
+                if (document.body && document.body.classList.contains("p-animes") && !document.getElementsByClassName('aw4-link').length) {
                     new WatchOnlineMenu(services);
                 }
             }
+            document.addEventListener('ready', start);
             document.addEventListener('page:load', start);
             document.addEventListener('turbolinks:load', start);
+            start();
         })
 })();
