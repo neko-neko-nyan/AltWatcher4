@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.0.1
+// @version      4.0.2
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       NekoNekoNyan
 // @match        http://shikimori.one/*
@@ -182,7 +182,7 @@
     document.head.appendChild(GM_addStyle(
             ".aw4-lang {width: 50%; min-width: unset; float: left; }\n" +
             ".aw4-langs {top: 5px; }\n" +
-            ".aw4-link {float: left; width: calc(100% - 32px); }\n" +
+            ".aw4-link {float: left; width: calc(100% - 32px); text-overflow: unset; padding-right: 0; padding-left: 0; }\n" +
             ".aw4-hider {width: 32px; float: right; min-width: unset; padding-left: 0; padding-right: 0; }\n"
     ));
 
@@ -205,7 +205,7 @@
                         if (servicesCache) res(servicesCache.services);
                         else GM_log("Not starting WatchOnlineMenu due to network error.");
                     } else {
-                        GM_setValue("servicesCache", {services: obj.response, date: new Date(new Date() + 1000 * 60 * 60 * 24 * 7)});
+                        GM_setValue("servicesCache", {services: obj.response, date: new Date(new Date() + 1000 * 60 * 60 * 24)});
                         res(obj.response)
                     }
                 }
