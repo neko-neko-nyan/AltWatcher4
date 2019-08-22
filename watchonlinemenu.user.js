@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.0
+// @version      4.1.1
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       NekoNekoNyan
 // @match        http://shikimori.one/*
@@ -149,8 +149,9 @@ WatchOnlineMenu.prototype.createServiceUrl = function(service){
 
 function checkUpdates(){
     const servicesCache = GM_getValue("servicesCache", null);
-    if (servicesCache && servicesCache.date < new Date()) return Promise.resolve(servicesCache.services);
+    if (servicesCache && servicesCache.date > new Date()) return Promise.resolve(servicesCache.services);
 
+    GM_log("[WatchOnlineMenu] Updating services list...");
     return new Promise(function (res, rej){
         GM_xmlhttpRequest({
             "method": "GET",
@@ -166,7 +167,7 @@ function checkUpdates(){
                     if (servicesCache) res(servicesCache.services);
                     else GM_log("[WatchOnlineMenu] Not starting WatchOnlineMenu due to network error.");
                 } else {
-                    GM_setValue("servicesCache", {services: obj.response, date: +new Date(new Date() + 1000 * 60 * 60 * 24)});
+                    GM_setValue("servicesCache", {services: obj.response, date: +new Date() + 1000 * 60 * 60 * 24});
                     res(obj.response)
                 }
             }
