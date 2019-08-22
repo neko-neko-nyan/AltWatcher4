@@ -4,181 +4,155 @@
     "description": "VK",
     "forRx": true,
     "forNotRx": true,
-    "url": "vk.com/video?q=",
-    "search": "name",
-    "addEpisode": true,
-    "episodeWord": "ru"
+    "url": "vk.com/video?q={localezedName}%20{nextEpisode}%20серия"
+  },
+  {
+    "name": "PlaShiki",
+    "forNotRx": true,
+    "url": "plashiki.online/anime/{id}/episodes/{nextEpisode}"
+  },
+  {
+    "name": "SL",
+    "description": "Shikimori Live",
+    "forNotRx": true,
+    "url": "live.shikimorilive.top/online/{id}/{nextEpisode}"
+  },
+
+  {
+    "name": "YouTube",
+    "forNotRx": true,
+    "url": "www.youtube.com/results?search_query={localezedName}%20{nextEpisode}%20{localizedEpisode}"
   },
   {
     "name": "Sibnet",
     "forNotRx": true,
-    "url": "video.sibnet.ru/search.php?panel=open&sortby=0&duration=0&inname=1&text=",
-    "search": "name",
-    "addEpisode": true,
-    "episodeWord": "ru"
+    "url": "video.sibnet.ru/search.php?panel=open&sortby=0&duration=0&inname=1&text={localezedName}%20{nextEpisode}%20серия"
   },
   {
     "name": "Myvi",
     "forNotRx": true,
-    "url": "www.myvi.tv/search/video?q=",
-    "search": "name",
-    "addEpisode": true,
-    "episodeWord": "ru"
+    "url": "www.myvi.tv/search/video?q={localezedName}%20{nextEpisode}%20серия"
   },
   {
-    "name": "YouTube",
+    "name": "Rutracker",
     "forNotRx": true,
-    "url": "www.youtube.com/results?search_query=",
-    "search": "name",
-    "addEpisode": true,
-    "episodeWord": true
+    "url": "rutracker.org/forum/tracker.php?nm={localezedName}"
   },
+
   {
-    "name": "PornHub",
-    "description": "100% Вариант",
-    "forRx": true,
-    "url": "pornhub.com/video/search?search=",
-    "search": "name",
-    "addEpisode": true,
-    "episodeWord": true
-  },
-  {
-    "name": "xVideos",
-    "description": "Для VPNщиков",
-    "forRx": true,
-    "url": "www.xvideos.com/?k=",
-    "search": "name",
-    "addEpisode": true,
-    "episodeWord": true
-  },
-  {
-    "name": "Anime 365",
+    "name": "Yummy",
+    "description": "YummyAnime",
     "forNotRx": true,
-    "url": "smotret-anime.ru/catalog/search?q=",
-    "search": "link"
+    "url": "yummyanime.club/search?word={localezedName}"
   },
   {
-    "name": "Hentai 365",
-    "forRx": true,
-    "url": "hentai365.ru/catalog/search?q=",
-    "search": "link"
+    "name": "AnimeVost",
+    "forNotRx": true,
+    "url": "animerost.org/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AniStar",
+    "forNotRx": true,
+    "url": "anistar.org/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AniDUB",
+    "forNotRx": true,
+    "url": "online.anidub.com/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AnimeBest",
+    "forNotRx": true,
+    "url": "animebest.org/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AnimeDub",
+    "forNotRx": true,
+    "url": "animedub.ru/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "YouAnime",
+    "forNotRx": true,
+    "url": "you-anime.ru/search?keyword={localezedName}"
+  },
+  {
+    "name": "Desu.me",
+    "forNotRx": true,
+    "url": "desu.me/search/search?keywords={localezedName}"
+  },
+  {
+    "name": "AniMaunt",
+    "forNotRx": true,
+    "url": "animaunt.tv/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AniTokio",
+    "forNotRx": true,
+    "url": "anitokyo.tv/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AnimeSpirit",
+    "forNotRx": true,
+    "url": "animespirit.ru/?do=search&subaction=search&story={localezedName}"
   },
   {
     "name": "SR",
     "description": "SovetRomantica",
     "forNotRx": true,
-    "url": "sovetromantica.com/anime?query=",
-    "search": "name"
+    "url": "sovetromantica.com/anime?query={localezedName}"
   },
   {
-    "name": "Rutracker",
+    "name": "Yandere",
     "forNotRx": true,
-    "url": "rutracker.org/forum/tracker.php?nm=",
-    "search": "name"
+    "url": "yandere.top/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AnimeLend",
+    "forNotRx": true,
+    "url": "animelend.info/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "RisensTeam",
+    "forNotRx": true,
+    "url": "risens.team/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "AniPlay",
+    "forNotRx": true,
+    "url": "aniplay.tv/?do=search&subaction=search&story={localezedName}"
+  },
+  {
+    "name": "Anime 365",
+    "forNotRx": true,
+    "url": "smotret-anime.ru/catalog/search?q={link}"
+  },
+
+  {
+    "name": "PornHub",
+    "description": "100% Вариант",
+    "forRx": true,
+    "url": "pornhub.com/video/search?search={localezedName}%20{nextEpisode}%20{localizedEpisode}"
+  },
+  {
+    "name": "xVideos",
+    "description": "Для VPNщиков",
+    "forRx": true,
+    "url": "www.xvideos.com/?k={localezedName}%20{nextEpisode}%20{localizedEpisode}"
   },
   {
     "name": "HentaiHaven",
     "description": "HH",
     "forRx": true,
-    "url": "hentaihaven.org/search/",
-    "search": "name"
+    "url": "hentaihaven.org/search/{englishName}"
   },
   {
-    "name": "Desu.me",
-    "forNotRx": true,
-    "url": "desu.me/search/search?keywords=",
-    "search": "name"
+    "name": "Hentai 365",
+    "forRx": true,
+    "url": "hentai365.ru/catalog/search?q={link}"
   },
-  {
-    "name": "YouAnime",
-    "forNotRx": true,
-    "url": "you-anime.ru/search?keyword=",
-    "search": "name"
-  },
-  {
-    "name": "Yummy",
-    "description": "YummyAnime",
-    "forNotRx": true,
-    "url": "yummyanime.club/search?word=",
-    "search": "name"
-  },
-  
   {
     "name": "HentaiChan",
     "forRx": true,
-    "url": "henchan.me",
-    "search": "dle"
-  },
-  {
-    "name": "AnimeSpirit",
-    "forNotRx": true,
-    "url": "animespirit.ru",
-    "search": "dle"
-  },
-  {
-    "name": "AniDUB",
-    "forNotRx": true,
-    "url": "online.anidub.com",
-    "search": "dle"
-  },
-  {
-    "name": "AniPlay",
-    "forNotRx": true,
-    "url": "aniplay.tv",
-    "search": "dle"
-  },
-  {
-    "name": "AnimeBest",
-    "forNotRx": true,
-    "url": "animebest.org",
-    "search": "dle"
-  },
-  {
-    "name": "AniTokio",
-    "forNotRx": true,
-    "url": "anitokyo.tv",
-    "search": "dle"
-  },
-  {
-    "name": "Yandere",
-    "forNotRx": true,
-    "url": "yandere.top",
-    "search": "dle"
-  },
-  {
-    "name": "AnimeDub",
-    "forNotRx": true,
-    "url": "animedub.ru",
-    "search": "dle"
-  },
-  {
-    "name": "AniMaunt",
-    "forNotRx": true,
-    "url": "animaunt.tv",
-    "search": "dle"
-  },
-  {
-    "name": "RisensTeam",
-    "forNotRx": true,
-    "url": "risens.team",
-    "search": "dle"
-  },
-  {
-    "name": "AniStar",
-    "forNotRx": true,
-    "url": "anistar.org",
-    "search": "dle"
-  },
-  {
-    "name": "AnimeLend",
-    "forNotRx": true,
-    "url": "animelend.info",
-    "search": "dle"
-  },
-  {
-    "name": "AnimeVost",
-    "forNotRx": true,
-    "url": "animerost.org",
-    "search": "dle"
+    "url": "henchan.me/?do=search&subaction=search&story={localezedName}"
   }
 ]
