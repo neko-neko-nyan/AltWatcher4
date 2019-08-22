@@ -3,14 +3,14 @@
 // @namespace    https://openuserjs.org/users/Pasha13666
 // @version      4.1.1
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
-// @author       NekoNekoNyan
+// @author       Pasha13666
 // @match        http://shikimori.one/*
 // @match        https://shikimori.one/*
 // @match        http://shikimori.org/*
 // @match        https://shikimori.org/*
 // @match        https://plashiki.online/*
 // @match        https://*.shikimorilive.top/*
-// @updateURL    https://github.com/Pasha13666/AltWatcher4/raw/master/watchonlinemenu.user.js
+// @updateURL    https://openuserjs.org/meta/Pasha13666/WatchOnlineMenu.meta.js
 // @homepageURL  https://github.com/Pasha13666/AltWatcher4
 // @run-at       document-body
 // @license      MIT
@@ -20,7 +20,7 @@
 // @grant        GM_log
 // @grant        GM_xmlhttpRequest
 // @connect      raw.githubusercontent.com
-// @copyright    2019, NekoNekoNyan (https://openuserjs.org/users/Pasha13666)
+// @copyright    2019, Pasha13666 (https://openuserjs.org/users/Pasha13666)
 // ==/UserScript==
 
 /* div.watch-online-placeholer (from shiki) - $ph
