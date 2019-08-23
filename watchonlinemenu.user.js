@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.1
+// @version      4.1.2
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       Pasha13666
 // @match        http://shikimori.one/*
@@ -163,7 +163,7 @@ function checkUpdates(){
                 else GM_log("[WatchOnlineMenu] Not starting WatchOnlineMenu due to network error.");
             },
             "onload": function(obj){
-                if (obj.status !== 200) {
+                if (obj.status !== 200  || !obj.response) {
                     if (servicesCache) res(servicesCache.services);
                     else GM_log("[WatchOnlineMenu] Not starting WatchOnlineMenu due to network error.");
                 } else {
@@ -195,7 +195,7 @@ if (location.host === 'plashiki.online'){
     }
     unsafeWindow.USERSCRIPT_VERSION = us.version + ' | Режим совместимости | ' + us.name + ' v' + us.realVersion;
 
-} else if (location.host === 'plashiki.online') {
+} else if (location.host.substr(location.host.length - 17) === 'shikimorilive.top') {
     unsafeWindow.SLiveVersion = '1.5';
 
 } else if (location.host === 'shikimori.one' || location.host === 'shikimori.org') {
