@@ -18,8 +18,8 @@
     "url": "live.shikimorilive.top/online/{id}/{nextEpisode}"
   },
   {
-    "name": "Nekomori"
-    "description": "Nekomori.ch"
+    "name": "Nekomori",
+    "description": "Nekomori.ch",
     "forNotRx": true,
     "url": "app.nekomori.ch/player/{id}/"
   },
