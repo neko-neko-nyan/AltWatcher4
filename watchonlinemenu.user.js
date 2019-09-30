@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.4
+// @version      4.1.5
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       Pasha13666
 // @match        http://shikimori.one/*
@@ -137,7 +137,7 @@ WatchOnlineMenu.prototype.createServiceUrl = function(service){
     const isEnglish = GM_getValue("searchLang", 'ru') == 'en';
 
     const data = {
-        id: location.pathname.replace(/^\/animes\/([^-]+)-.*$/, "$1"),
+        id: location.pathname.replace(/^\/animes\/[a-z]*(\d+)-.*$/, "$1"),
         link: location.href,
         nextEpisode: epNext,
         englishName: animeName[1],
