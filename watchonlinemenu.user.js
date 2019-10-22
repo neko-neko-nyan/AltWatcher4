@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.5
+// @version      4.1.6
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       Pasha13666
 // @match        http://shikimori.one/*
@@ -20,6 +20,7 @@
 // @grant        GM_log
 // @grant        GM_xmlhttpRequest
 // @connect      anime365.ru
+// @connect      smotret-anime.online
 // @connect      smotret-anime-365.ru
 // @connect      raw.githubusercontent.com
 // @copyright    2019, Pasha13666 (https://openuserjs.org/users/Pasha13666)
