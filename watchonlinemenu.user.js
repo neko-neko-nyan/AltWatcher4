@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.6
+// @version      4.1.7
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       Pasha13666
 // @match        http://shikimori.one/*
@@ -19,24 +19,22 @@
 // @grant        GM_setValue
 // @grant        GM_log
 // @grant        GM_xmlhttpRequest
-// @connect      anime365.ru
-// @connect      smotret-anime.online
-// @connect      smotret-anime-365.ru
 // @connect      raw.githubusercontent.com
 // @copyright    2019, Pasha13666 (https://openuserjs.org/users/Pasha13666)
 // ==/UserScript==
 
 /* div.watch-online-placeholer (from shiki) - $ph
- *   div.watch-online - $wo
- *     a.b-link_button.aw4-link - $link
- *     a.b-link_buttin.aw4-hider - $hider
+ *   div - $wo
+ *     a.aw4-dark-button.aw4-link - $link
+ *     a.aw4-dark-button.aw4-hider - $hider
  *     div.clearfix - $clearfix
- *   div.block - $bar
- *     a.b-link_button.watch-online
+ *
+ *   div - $bar
+ *     a.aw4-dark-button.watch-online
  *     ...
- *     div.watch-online.block.aw4-langs - $langs
- *       a.b-link_button.aw4-lang - $ru
- *       a.b-link_button.aw4-lang - $en
+ *     div.aw4-langs - $langs
+ *       a.aw4-dark-button.aw4-lang - $ru
+ *       a.aw4-dark-button.aw4-lang - $en
  */
 function WatchOnlineMenu(services) {
     this.services = services;
@@ -59,17 +57,17 @@ function WatchOnlineMenu(services) {
     this.$ru.innerText = 'ru';
     this.$en.innerText = 'en';
 
-    this.$link.classList = "b-link_button dark aw4-link"
-    this.$wo.classList = "watch-online";
+    this.$link.classList = "aw4-dark-button aw4-link"
+    this.$hider.classList = "aw4-dark-button aw4-hider";
     this.$clearfix.classList = "clearfix";
-    this.$hider.classList = "b-link_button dark aw4-hider";
-    this.$bar.classList = "block";
-    this.$ru.classList = "b-link_button aw4-lang";
-    this.$en.classList = "b-link_button aw4-lang";
-    this.$langs.classList = "block watch-online aw4-langs";
 
-    if (GM_getValue("searchLang", 'ru') === 'ru') this.$ru.classList.add('dark');
-    else this.$en.classList.add('dark');
+    this.$bar.classList = "";
+    this.$ru.classList = "aw4-dark-button aw4-lang";
+    this.$en.classList = "aw4-dark-button aw4-lang";
+    this.$langs.classList = "aw4-langs";
+
+    if (GM_getValue("searchLang", 'ru') === 'ru') this.$ru.classList.add('aw4-selected');
+    else this.$en.classList.add('aw4-selected');
 
     this.isHentai = document.querySelector('a.b-tag[href*="genre/12"]') != null;
 
@@ -82,15 +80,15 @@ function WatchOnlineMenu(services) {
     this.redrawButton();
 
     this.$ru.addEventListener('click', () => {
-        this.$ru.classList.add('dark');
-        this.$en.classList.remove('dark');
+        this.$ru.classList.add('aw4-selected');
+        this.$en.classList.remove('aw4-selected');
         GM_setValue("searchLang", 'ru');
         this.redrawButton();
     });
 
     this.$en.addEventListener('click', () => {
-        this.$en.classList.add('dark');
-        this.$ru.classList.remove('dark');
+        this.$en.classList.add('aw4-selected');
+        this.$ru.classList.remove('aw4-selected');
         GM_setValue("searchLang", 'en');
         this.redrawButton();
     });
@@ -111,11 +109,18 @@ function WatchOnlineMenu(services) {
 
 WatchOnlineMenu.prototype.createPlayerButton = function(service, id){
     var a = document.createElement('a');
-    a.classList = "b-link_button dark watch-online";
+    a.classList = "aw4-dark-button";
     a.innerText = service.description || service.name;
-    a.addEventListener('click', () => {
+    a.addEventListener('click', (ev) => {
         GM_setValue(this.isHentai? "currentRxServiceId": "currentServiceId", id);
         this.redrawButton();
+    });
+    a.addEventListener('mousedown', (ev) => {
+        if (ev.which == 2 || ev.button == 4) {
+            ev.preventDefault();
+            window.open(this.createServiceUrl(service),'_blank');
+            return;
+        }
     });
     return a;
 }
@@ -179,10 +184,12 @@ function checkUpdates(){
 }
 
 document.head.appendChild(GM_addStyle(
-        ".aw4-lang {width: 50%; min-width: unset; float: left; }\n" +
-        ".aw4-langs {top: 5px; }\n" +
-        ".aw4-link {float: left; width: calc(100% - 32px); text-overflow: unset; padding-right: 0; padding-left: 0; }\n" +
-        ".aw4-hider {width: 32px; float: right; min-width: unset; padding-left: 0; padding-right: 0; }\n"
+    ".aw4-dark-button { background-color: #456; border: 1px solid #3e4d5d; color: #fff; display: block; text-align: center; cursor: pointer; padding: 8px 0; font-size: 15px; font-weight: 600; }" +
+    ".aw4-link  {float: left; width: calc(100% - 32px); margin-bottom: 15px; }\n" +
+    ".aw4-hider {width: 32px; float: right; }\n" +
+    ".aw4-lang { width: 50%; float: left; }\n" +
+    ".aw4-langs { margin-top: 5px; }\n" +
+    ".aw4-selected { border: 5px solid #00c12a; padding: 4px 0; }\n"
 ));
 
 if (location.host === 'plashiki.online'){
