@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.8
+// @version      4.1.9
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       Pasha13666
 // @match        http://shikimori.one/*
 // @match        https://shikimori.one/*
 // @match        http://shikimori.org/*
 // @match        https://shikimori.org/*
-// @match        https://plashiki.online/*
+// @match        https://plashiki.su/*
 // @match        https://*.shikimorilive.top/*
 // @updateURL    https://openuserjs.org/meta/Pasha13666/WatchOnlineMenu.meta.js
 // @homepageURL  https://github.com/Pasha13666/AltWatcher4
@@ -200,7 +200,7 @@ document.head.appendChild(GM_addStyle(
     ".aw4-selected { border: 5px solid #00c12a; padding: 4px 0; }\n"
 ));
 
-if (location.host === 'plashiki.online'){
+if (location.host === 'plashiki.su'){
     unsafeWindow.corsAjax = function (){
         GM_log('[WatchOnlineMenu] PlaShiki xhr:', Array.prototype.slice.call(arguments));
         return GM_xmlhttpRequest.apply(this, arguments);
@@ -208,10 +208,16 @@ if (location.host === 'plashiki.online'){
     const us = unsafeWindow.USERSCRIPT = {
         name: GM_info.script.name,
         author: GM_info.script.author,
-        version: "0.9.0",
+        version: "1.0.1",
         realVersion: GM_info.script.version
     }
     unsafeWindow.USERSCRIPT_VERSION = us.version + ' | Режим совместимости | ' + us.name + ' v' + us.realVersion;
+    unsafeWindow.toggleGalo4ki = function(e) {};
+	unsafeWindow.galo4kiEnabled = function() {
+        return Promise.resolve(function(e) {
+            return false;
+        })
+    };
 
 } else if (location.host.substr(location.host.length - 17) === 'shikimorilive.top') {
     unsafeWindow.SLiveVersion = '1.5';
