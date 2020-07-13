@@ -9,7 +9,7 @@
   {
     "name": "PlaShiki",
     "forNotRx": true,
-    "url": "plashiki.online/anime/{id}/episodes/{nextEpisode}"
+    "url": "plashiki.su/anime/{id}/episodes/{nextEpisode}"
   },
   {
     "name": "SL",
