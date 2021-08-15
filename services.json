@@ -7,7 +7,7 @@
     "url": "vk.com/video?q={localezedName}%20{nextEpisode}%20серия"
   },
   {
-    "name": "PlaShiki",
+    "name": "PlaShiki(dead)",
     "forNotRx": true,
     "url": "plashiki.su/anime/{id}/episodes/{nextEpisode}"
   },
@@ -21,7 +21,7 @@
     "name": "Nekomori",
     "description": "Nekomori.ch",
     "forNotRx": true,
-    "url": "app.nekomori.ch/player/{id}/"
+    "url": "nekomori.ch/search?type=arts&search={localezedName}"
   },
 
   {
@@ -50,6 +50,11 @@
     "description": "YummyAnime",
     "forNotRx": true,
     "url": "yummyanime.club/search?word={localezedName}"
+  },
+  {
+    "name": "AnimeGo",
+    "forNotRx": true,
+    "url": "https://animego.org/search/all?q={localezedName}"
   },
   {
     "name": "AnimeVost",
