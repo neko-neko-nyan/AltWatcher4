@@ -1,4 +1,16 @@
 [
+
+  {
+    "name": "AnimeGo",
+    "forNotRx": true,
+    "url": "https://animego.org/search/all?q={localezedName}"
+  },
+  {
+    "name": "Yummy",
+    "description": "YummyAnime",
+    "forNotRx": true,
+    "url": "yummyanime.club/search?word={localezedName}"
+  },
   {
     "name": "VK",
     "description": "VK",
@@ -45,17 +57,6 @@
     "url": "rutracker.org/forum/tracker.php?nm={localezedName}"
   },
 
-  {
-    "name": "Yummy",
-    "description": "YummyAnime",
-    "forNotRx": true,
-    "url": "yummyanime.club/search?word={localezedName}"
-  },
-  {
-    "name": "AnimeGo",
-    "forNotRx": true,
-    "url": "https://animego.org/search/all?q={localezedName}"
-  },
   {
     "name": "AnimeVost",
     "forNotRx": true,
