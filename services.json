@@ -3,7 +3,7 @@
   {
     "name": "AnimeGo",
     "forNotRx": true,
-    "url": "https://animego.org/search/all?q={localezedName}"
+    "url": "animego.org/search/all?q={localezedName}"
   },
   {
     "name": "Yummy",
@@ -11,6 +11,13 @@
     "forNotRx": true,
     "url": "yummyanime.club/search?word={localezedName}"
   },
+  {
+    "name": "Nekomori",
+    "description": "Nekomori.ch",
+    "forNotRx": true,
+    "url": "nekomori.ch/search?type=arts&search={localezedName}"
+  },
+
   {
     "name": "VK",
     "description": "VK",
@@ -28,12 +35,6 @@
     "description": "Shikimori Live",
     "forNotRx": true,
     "url": "live.shikimorilive.top/online/{id}/{nextEpisode}"
-  },
-  {
-    "name": "Nekomori",
-    "description": "Nekomori.ch",
-    "forNotRx": true,
-    "url": "nekomori.ch/search?type=arts&search={localezedName}"
   },
 
   {
