@@ -1,15 +1,13 @@
 // ==UserScript==
 // @name         WatchOnlineMenu
 // @namespace    https://openuserjs.org/users/Pasha13666
-// @version      4.1.9
+// @version      4.1.10
 // @description  [shikimori.org] Добавляет ссылки на сайты просмотра аниме
 // @author       Pasha13666
 // @match        http://shikimori.one/*
 // @match        https://shikimori.one/*
 // @match        http://shikimori.org/*
 // @match        https://shikimori.org/*
-// @match        https://plashiki.su/*
-// @match        https://*.shikimorilive.top/*
 // @updateURL    https://openuserjs.org/meta/Pasha13666/WatchOnlineMenu.meta.js
 // @homepageURL  https://github.com/Pasha13666/AltWatcher4
 // @run-at       document-body
@@ -200,40 +198,16 @@ document.head.appendChild(GM_addStyle(
     ".aw4-selected { border: 5px solid #00c12a; padding: 4px 0; }\n"
 ));
 
-if (location.host === 'plashiki.su'){
-    unsafeWindow.corsAjax = function (){
-        GM_log('[WatchOnlineMenu] PlaShiki xhr:', Array.prototype.slice.call(arguments));
-        return GM_xmlhttpRequest.apply(this, arguments);
-    }
-    const us = unsafeWindow.USERSCRIPT = {
-        name: GM_info.script.name,
-        author: GM_info.script.author,
-        version: "1.0.1",
-        realVersion: GM_info.script.version
-    }
-    unsafeWindow.USERSCRIPT_VERSION = us.version + ' | Режим совместимости | ' + us.name + ' v' + us.realVersion;
-    unsafeWindow.toggleGalo4ki = function(e) {};
-	unsafeWindow.galo4kiEnabled = function() {
-        return Promise.resolve(function(e) {
-            return false;
-        })
-    };
-
-} else if (location.host.substr(location.host.length - 17) === 'shikimorilive.top') {
-    unsafeWindow.SLiveVersion = '1.5';
-
-} else if (location.host === 'shikimori.one' || location.host === 'shikimori.org') {
-    checkUpdates()
-        .then(function(services){
-            GM_log("[WatchOnlineMenu] Starting...");
-            let start = function(){
-                if (document.body && document.body.classList.contains("p-animes") && !document.getElementsByClassName('aw4-link').length) {
-                    new WatchOnlineMenu(services);
-                }
+checkUpdates()
+    .then(function(services){
+        GM_log("[WatchOnlineMenu] Starting...");
+        let start = function(){
+            if (document.body && document.body.classList.contains("p-animes") && !document.getElementsByClassName('aw4-link').length) {
+                new WatchOnlineMenu(services);
             }
-            document.addEventListener('ready', start);
-            document.addEventListener('page:load', start);
-            document.addEventListener('turbolinks:load', start);
-            start();
-        })
-}
+        }
+        document.addEventListener('ready', start);
+        document.addEventListener('page:load', start);
+        document.addEventListener('turbolinks:load', start);
+        start();
+    });
