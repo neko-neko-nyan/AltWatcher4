@@ -6,23 +6,6 @@
     "forNotRx": true,
     "url": "vk.com/video?q={localezedName}%20{nextEpisode}%20серия"
   },
-  {
-    "name": "PlaShiki",
-    "forNotRx": true,
-    "url": "plashiki.su/anime/{id}/episodes/{nextEpisode}"
-  },
-  {
-    "name": "SL",
-    "description": "Shikimori Live",
-    "forNotRx": true,
-    "url": "live.shikimorilive.top/online/{id}/{nextEpisode}"
-  },
-  {
-    "name": "Nekomori",
-    "description": "Nekomori.ch",
-    "forNotRx": true,
-    "url": "app.nekomori.ch/player/{id}/"
-  },
 
   {
     "name": "YouTube",
@@ -50,11 +33,6 @@
     "description": "YummyAnime",
     "forNotRx": true,
     "url": "yummyanime.club/search?word={localezedName}"
-  },
-  {
-    "name": "AnimeVost",
-    "forNotRx": true,
-    "url": "animerost.org/?do=search&subaction=search&story={localezedName}"
   },
   {
     "name": "AniStar",
@@ -108,16 +86,6 @@
     "url": "sovetromantica.com/anime?query={localezedName}"
   },
   {
-    "name": "Yandere",
-    "forNotRx": true,
-    "url": "yandere.top/?do=search&subaction=search&story={localezedName}"
-  },
-  {
-    "name": "AnimeLend",
-    "forNotRx": true,
-    "url": "animelend.info/?do=search&subaction=search&story={localezedName}"
-  },
-  {
     "name": "RisensTeam",
     "forNotRx": true,
     "url": "risens.team/?do=search&subaction=search&story={localezedName}"
@@ -130,7 +98,7 @@
   {
     "name": "Anime 365",
     "forNotRx": true,
-    "url": "smotret-anime.ru/catalog/search?q={link}"
+    "url": "smotret-anime.online/catalog/search?q={link}"
   },
 
   {
@@ -146,19 +114,8 @@
     "url": "www.xvideos.com/?k={localezedName}%20{nextEpisode}%20{localizedEpisode}"
   },
   {
-    "name": "HH",
-    "description": "HentaiHaven",
-    "forRx": true,
-    "url": "hentaihaven.org/search/{englishName}"
-  },
-  {
     "name": "Hentai 365",
     "forRx": true,
     "url": "hentai365.ru/catalog/search?q={link}"
-  },
-  {
-    "name": "HentaiChan",
-    "forRx": true,
-    "url": "henchan.me/?do=search&subaction=search&story={localezedName}"
   }
 ]
